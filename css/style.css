@@ -1,0 +1,126 @@
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  html, body, div, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: sans-serif;
+    font-weight: 100;
+  }
+
+  .nav {
+    background: #e4e8ef;
+    height: 60px;
+  }
+
+  /*HELP: HOW TO MAKE CENTERED WITHIN NAV BAR.*/
+  .nav li {
+    display: inline-block;
+    margin-left:auto; /*DOESNT WORK TO PUSH CENTER*/
+    margin-right: auto;
+    list-style: none;
+    height: 60px; 
+    line-height: 60px; 
+    padding: 0 40px; 
+  }
+ /*HELP:How change text color to my light grey color when hoovering?
+ Works below for download resume button but not here.*/
+  .nav li:hover {
+    background: #74224F;
+    color:#e4e8ef;
+  }
+
+  .nav-link {
+    color: #221F1F;
+    text-decoration: none;
+  }
+/*how to center button to page*/
+  .button{
+    background-color: #e4e8ef;
+    border: none;
+    color: #221F1F;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;    
+}
+
+.button:hover {
+  background: #74224F;
+  color:#e4e8ef;
+}
+
+  #categoryGrid {
+    margin: 0px 5%;
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "Zen DeptofEd TravelX"
+    "MCC MCC TravelX"
+    ;
+  }
+  
+  #Zen {
+    grid-area: Zen;
+    background-image: url("../images/Zen.png");
+  }
+  #DeptofEd {
+    grid-area: DeptofEd;
+    background-image: url("../images/DeptofEd.png");
+  }
+  
+  /*How to make text color white for this one*/
+  #TravelX {
+    grid-area: TravelX;
+    background-image: url("../images/TravelX.jpeg");
+  }
+  
+  #MCC {
+    grid-area: MCC;
+    background-image: url("../images/MCC.jpeg");
+  }
+
+  .categoryGridArea {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+  }
+  
+  .row {
+    display: flex;
+  }
+  .column {
+    flex: 50%;
+    padding: 10px;
+    height: 300px;
+  }
+ 
+  /*Mobile*/
+  @media only screen and (max-width: 600px) {
+    [class*="col-"]{
+      width:100%;
+    }
+    #categoryGrid {
+      grid-template-rows: 300px 300px 300px 300px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "Zen"
+      "DeptofEd"
+      "TravelX"
+      "MCC"
+      ;
+    }  
+  }
+ 
