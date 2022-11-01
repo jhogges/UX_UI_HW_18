@@ -107,6 +107,7 @@
     height: 300px;
   }
  
+
   /*Mobile*/
   @media only screen and (max-width: 600px) {
     [class*="col-"]{
